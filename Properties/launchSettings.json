@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Tic-Tac-Toe-Gui (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Tic-Tac-Toe-Gui (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
