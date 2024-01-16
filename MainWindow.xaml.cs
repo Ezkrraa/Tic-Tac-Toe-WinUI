@@ -56,17 +56,12 @@ namespace Tic_Tac_Toe_Gui
                 if (board.HasWon())
                 {
                     System.Diagnostics.Debug.WriteLine($"{currentPlayer} won!");
+                    updateBoard();
                     ShowWinPopup();
-                    Reset();
                 }
                 else if (currentPlayedIndex >= 9)
                 {
                     Reset();
-                    while(true)
-                    {
-                        if (!Winner.IsOpen) break;
-                        Thread.Sleep(20);
-                    }
                 }
                 else
                 {
@@ -122,6 +117,7 @@ namespace Tic_Tac_Toe_Gui
             if (Winner.IsOpen)
             {
                 Winner.IsOpen = false;
+                Reset();
             }
         }
 
